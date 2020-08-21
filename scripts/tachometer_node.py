@@ -14,7 +14,7 @@ import subprocess
 def get_tachometer_reading():
 	rospy.init_node('tachometer_node', anonymous=True)
 	pub = rospy.Publisher('tachometer_reading', TachometerReading)
-	rate = rospy.Rate(10) # 10hz
+	rate = rospy.Rate(100) # 100hz
 	while not rospy.is_shutdown():
 		results = subprocess.Popen(["sigrok-cli","--driver=uni-t-ut372:conn=1a86.e008", "--samples=1"], stdout=subprocess.PIPE)
 		out, err = results.communicate()
@@ -23,8 +23,6 @@ def get_tachometer_reading():
 		msg.header.stamp = rospy.Time.now()
 		msg.reading = rpm_number
 		pub.publish(msg)
-		print('rpm_number ', rpm_number)
-		print('time_stamp ', msg.header.stamp)
 		rate.sleep()
 
 
