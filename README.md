@@ -12,3 +12,5 @@ Sigrok implemented a driver for this specific tachometer. This node calls its co
 TO run the node: rosrun tachometer tachometer_node.py
 
 This could get a update rate of 4 Hz.
+
+To operate the tachometer, turn on the tachometer, connect it to the laptop using the usb cable. Long press the R/C to enter setup mode. Set usb mode to 1. Aslo ensure that the tachometer is at RPM mode.
