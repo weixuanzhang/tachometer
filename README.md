@@ -1,5 +1,5 @@
 # tachometer
-A rosnode to get measurement data from UNI-T UT372 Tachometer
+A ROS node to get measurement data from UNI-T UT372 Tachometer
 
 # system & software requirement
 Ubuntu 18.04
@@ -13,4 +13,4 @@ TO run the node: rosrun tachometer tachometer_node.py
 
 This could get a update rate of 4 Hz.
 
-To operate the tachometer, turn on the tachometer, connect it to the laptop using the usb cable. Long press the R/C to enter setup mode. Set usb mode to 1. Aslo ensure that the tachometer is at RPM mode.
+To operate the tachometer, turn on the tachometer, connect it to the laptop using the usb cable. Long press the R/C to enter setup mode. Set usb mode to 1. Also ensure that the tachometer is at RPM mode.
